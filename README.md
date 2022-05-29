@@ -16,7 +16,7 @@ InvisibleHeroは姿を現しているときは通常の攻撃をするが、 消
 public class Prog92 {
 
     public static void main(String[] args) {
-        SuperHero h = new SuperHero();
+        InvisibleHero h = new InvisibleHero();
         Slime s = new Slime('A');
         h.attack(s);
         h.getInvisible();
