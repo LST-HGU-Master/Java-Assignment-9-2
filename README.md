@@ -15,13 +15,13 @@ InvisibleHeroは姿を現しているときは通常の攻撃をするが、 消
 ```java
 public class Prog92 {
 
-	public static void main(String[] args) {
-		SuperHero h = new SuperHero();
-		Slime s = new Slime('A');
-		h.attack(s);
-		h.getInvisible();
-		h.attack(s);
-	}
+    public static void main(String[] args) {
+        SuperHero h = new SuperHero();
+        Slime s = new Slime('A');
+        h.attack(s);
+        h.getInvisible();
+        h.attack(s);
+    }
 
 }
 ```
