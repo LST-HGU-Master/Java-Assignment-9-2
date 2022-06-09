@@ -11,7 +11,7 @@ InvisibleHeroは姿を現しているときは通常の攻撃をするが、 消
 
 
 
-### Prog92、Hero、Slimeクラス (提出不要)
+### Prog92、Hero、Slimeクラス (これらのコードの提出は不要)
 ```java
 public class Prog92 {
 
@@ -35,7 +35,7 @@ public class Hero
     public void attack(Slime m) //戦う
     {
         System.out.println(this.name + "は攻撃した！");
-        System.out.println("敵に５ポイントのダメージをあたえた！");
+        System.out.println("敵に5ポイントのダメージをあたえた！");
         m.hp -= 5;
     }
 }
