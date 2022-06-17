@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Test;
 import java.io.*;
 import static org.junit.jupiter.api.Assertions.*;
 /**
- * @version (20220605)
+ * @version (20220617)
  * 注意）
 
  **/
@@ -36,7 +36,11 @@ public class InvisibleHeroTest {
             throw err;
         }
         // action
-        h.attack(m);
+        try {
+            h.attack(m);
+        } catch (StackOverflowError sofe) {
+            fail("InvisibleHero.attack()メソッド内でthis.attack(スライムクラスのインスタンス)としてはいけません!");
+        }
         // undo the binding in System
         System.setOut(originalOut);
         // assertion        
