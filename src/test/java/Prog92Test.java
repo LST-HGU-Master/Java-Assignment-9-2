@@ -42,7 +42,6 @@ public class Prog92Test {
             fail("Prog92.main() の print 出力が 5 行ではありません！（実際の出力行数: " + (prints.length - 1) + "行）");
         }
 
-
         String expectedLine3 = "勇者工太は姿を消した！";
 
         // 各行のアサーション
