@@ -1,7 +1,7 @@
 # 課題 9-2: オーバーライドと親インスタンス部分の呼び出し
 
 ### 課題の説明
-`InvisibleHero`は姿を現しているときは通常の攻撃を行うが、姿を消しているときは「見えない攻撃」を行う。
+`InvisibleHero`は姿を現しているときは通常の攻撃を行うが、姿を消しているときは「見えない攻撃」を行う。<br>
 これを表現するために、課題9-1で作成した`InvisibleHero`クラスに以下に示す`attack`メソッドを追加しなさい。
 
 追加するメソッドと仕様
@@ -10,15 +10,15 @@
 | `attack` | `Slime s` | なし | `isVisible`の状態に応じて攻撃処理を分岐する(詳細は下記を参照)。 |
 
 【処理詳細】
-１．`isVisible == true`（姿が見えている）の場合:
-　・親クラス `Hero` の `attack(s)` メソッドを呼び出す（`super.attack(s);` を使用）。
-２．`isVisible == false`（姿を消している）の場合:
-　・`"工太は見えない攻撃をした！"` と表示する。
-　・`"敵に10ポイントのダメージをあたえた！"` と表示する。
+１．`isVisible == true`（姿が見えている）の場合:<br>
+　・親クラス `Hero` の `attack(s)` メソッドを呼び出す（`super.attack(s);` を使用）。<br>
+２．`isVisible == false`（姿を消している）の場合:<br>
+　・`"工太は見えない攻撃をした！"` と表示する。<br>
+　・`"敵に10ポイントのダメージをあたえた！"` と表示する。<br>
 　・引数のスライム `s` の `hp` を 10 減少させる（`s.hp -= 10;`）。
 
 ### 動作確認用クラス (これらのコードの提出は不要)
-Prog92.java
+・Prog92.java
 ```java
 public class Prog92 {
 
@@ -33,7 +33,7 @@ public class Prog92 {
 }
 ```
 
-Hero.java
+・Hero.java
 ```java
 public class Hero
 {
@@ -49,7 +49,7 @@ public class Hero
 }
 ```
 
-Slime.java
+・Slime.java
 ```java
 public class Slime
 {
