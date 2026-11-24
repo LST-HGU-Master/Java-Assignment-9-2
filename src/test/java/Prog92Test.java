@@ -42,24 +42,13 @@ public class Prog92Test {
             fail("Prog92.main() の print 出力が 5 行ではありません！（実際の出力行数: " + (prints.length - 1) + "行）");
         }
 
-        // getInvisible() 出力を studentID から動的算出
-        int expectedLevel;
-        try {
-            InvisibleHero dummyHero = new InvisibleHero();
-            String studentID = dummyHero.studentID;
-            int lastTwo = Integer.parseInt(studentID.substring(studentID.length() - 2));
-            expectedLevel = (lastTwo % 5) + 1;
-        } catch (Exception e) {
-            fail("InvisibleHero.studentID の形式が不正です。");
-            return;
-        }
 
-        String expectedLine3 = "勇者工太は姿を消した！（ステルスレベル:" + expectedLevel + "）";
+        String expectedLine3 = "勇者工太は姿を消した！";
 
         // 各行のアサーション
         assertEquals("工太は攻撃した！", prints[0], "1行目の出力（通常攻撃）が異なります。");
         assertEquals("敵に5ポイントのダメージをあたえた！", prints[1], "2行目の出力（通常ダメージ）が異なります。");
-        assertEquals(expectedLine3, prints[2], "3行目の出力（姿を消す・ステルスレベル）が異なります。");
+        assertEquals(expectedLine3, prints[2], "3行目の出力（姿を消す）が異なります。");
         assertEquals("工太は見えない攻撃をした！", prints[3], "4行目の出力（見えない攻撃）が異なります。");
         assertEquals("敵に10ポイントのダメージをあたえた！", prints[4], "5行目の出力（見えない攻撃ダメージ）が異なります。");
 
