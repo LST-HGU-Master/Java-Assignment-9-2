@@ -26,7 +26,7 @@ public class Prog92 {
         InvisibleHero h = new InvisibleHero();
         Slime s = new Slime('A');
         h.attack(s);        // 1. 姿が見えている状態での攻撃（親クラスのattack）
-        h.getInvisible();   // 2. 姿を消す（課題9-1の動的ステルスレベル出力）
+        h.getInvisible();   // 2. 姿を消す
         h.attack(s);        // 3. 姿を消した状態での攻撃（見えない攻撃）
     }
 
@@ -74,7 +74,7 @@ public class Slime
 ```
 工太は攻撃した！
 敵に5ポイントのダメージをあたえた！
-勇者工太は姿を消した！（ステルスレベル:2）  ← ※学籍番号(例:4724301)に応じた動的出力
+勇者工太は姿を消した！
 工太は見えない攻撃をした！
 敵に10ポイントのダメージをあたえた！
 ```
